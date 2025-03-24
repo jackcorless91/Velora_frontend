@@ -1,0 +1,27 @@
+header {
+    height: 10vh;
+    width: 100vw;
+    background:  #304b75;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-right: 5vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CartUserContainer {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.CartUserContainer a {
+    height: 50px;
+    width: 50px;
+    margin-left: 5vw;
+    padding: 0;
+}
