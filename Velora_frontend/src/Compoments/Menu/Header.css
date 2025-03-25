@@ -11,6 +11,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    font-size: 1.2rem;
 }
 
 .CartUserContainer {
@@ -24,4 +26,70 @@ header {
     width: 50px;
     margin-left: 5vw;
     padding: 0;
+}
+
+.HamburgerMenuOpen {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.MenuIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuIcons a {
+    background-color: #F1EDE1;
+    height: 64px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.HamburgerMenuOpen {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 100vw;
+    height: 70vh;
+
+    background-color: #B55A30;
+}
+
+.MenuIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.MenuIcons {
+
+}
+
+.MenuPageLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MenuPageLinks a {
+    background-color: #F1EDE1;
+    height: 64px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
