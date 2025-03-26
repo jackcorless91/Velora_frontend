@@ -1,0 +1,180 @@
+/* Background and layout */
+.login-page-container {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #304B75;
+    opacity: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Form Title */
+.login-field-title {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    color: #E2A03F;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Form Wrapper */
+.login-page-form {
+    width: min(90%, 450px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Fields */
+.login-input-group {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    padding: 0.75rem;
+    margin-bottom: 1.8rem;
+    background-color: #D9D9D9;
+    color: #304B75;
+    width: 100%; /* Ensures uniform width */
+    transition: all 0.3s ease-in-out;
+}
+
+.login-input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+    margin-left: 10px;
+    color: #304B75;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sign In Button Container */
+.login-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-page-button {
+    width: 50%;
+    background-color: #E2A03F;
+    color: #D9D9D9;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.login-page-button:hover {
+    background-color: #cb9038;
+}
+
+/* Footer */
+.login-page-footer {
+    margin-top: 1.5rem;
+    color: #D9D9D9;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-page-footer a {
+    text-decoration: underline;
+    color: #D9D9D9;
+}
+
+.login-page-footer a:hover {
+    color: #E2A03F;
+}
+
+/* ==================RESPONSIVE DESIGN======================*/
+
+/* Small Phones (320px) */
+@media (max-width: 320px) {
+    .login-field-title {
+        font-size: 2.5rem;
+        top: 3%;
+    }
+
+    .login-page-form {
+        width: min(95%, 350px);
+    }
+
+    .login-input-group {
+        width: min(100%, 300px);
+    }
+
+    .login-page-button {
+        width: 70%;
+        font-size: 1rem;
+    }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+    .login-page-form {
+        max-width: 500px;
+        padding: 2.5rem;
+    }
+
+    .login-field-title {
+        font-size: 3rem;
+    }
+
+    .login-page-button {
+        width: 55%;
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktops (1024px and up) */
+@media (min-width: 1024px) {
+    .login-page-container {
+        flex-direction: row;
+    }
+
+    .login-page-form {
+        max-width: 600px;
+        padding: 3rem;
+    }
+
+    .login-input-group {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .login-input-group input {
+        font-size: 1.2rem;
+    }
+
+    .login-field-title {
+        font-size: 3.5rem;
+    }
+
+    .login-page-button {
+        width: 65%;
+        font-size: 1.3rem;
+    }
+}
