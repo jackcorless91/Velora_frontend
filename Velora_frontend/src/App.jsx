@@ -1,7 +1,7 @@
-import './App.css'
-import Home from "./Compoments/Pages/Home.jsx"
-import LogInPage from "./Compoments/Pages/LogInPage.jsx"
-import SignUpPage from "./Compoments/Pages/SignUpPage.jsx"
+import { Route, Routes } from "react-router-dom";
+import Home from "./Compoments/Pages/Home.jsx";
+import LogInPage from "./Compoments/Pages/LogInPage.jsx";
+import SignUpPage from "./Compoments/Pages/SignUpPage.jsx";
 
 
 function App() {
