@@ -28,18 +28,18 @@ const LoginPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         // Validation Checks
         if (!isValidEmail(formData.email)) {
             toast.error("Please enter a valid email address.");
             return;
         }
-
+    
         if (!formData.password) {
             toast.error("Password is required.");
             return;
         }
-
+    
         try {
             const response = await axios.post(
                 "http://localhost:1234/api/auth/login",
@@ -48,13 +48,35 @@ const LoginPage = () => {
                     password: formData.password,
                 }
             );
-
-            console.log("Login successful:", response.data);
+    
+            const userData = response.data.data.user;
+    
+            // Check if user data and role exist
+            if (!userData || !userData.role) {
+                toast.error("Login failed. Missing user role.");
+                return;
+            }
+    
+            // Successfully login
             toast.success("Login successful!");
-
-            navigate("/"); 
+            localStorage.setItem("user", JSON.stringify(userData));
+    
+            // Redirect based on user role
+            let redirectPath = response.data.data.redirectTo;
+    
+            // If the user is an admin, redirect to /admin
+            if (userData.role === "admin") {
+                redirectPath = "/admin"; 
+            }
+    
+            // Navigate to the redirect path
+            if (redirectPath) {
+                navigate(redirectPath);
+            } else {
+                toast.error("Invalid redirect path.");
+            }
+    
         } catch (error) {
-            console.error("Login failed:", error.response?.data || error.message);
             toast.error(error.response?.data?.message || "Login failed. Please try again.");
         }
     };
@@ -115,6 +137,6 @@ const LoginPage = () => {
             </form>
         </section>
     );
-}
+};
 
 export default LoginPage;

@@ -1,0 +1,46 @@
+.admin-page {
+    padding: 20px;
+    background-color: #304B75;
+    min-height: 100vh;
+  }
+
+.admin-welcome {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-top: 10px;
+}
+  
+.admin-section {
+    background: #FFF6DA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+  
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+  
+.admin-table th, .admin-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+  
+.admin-table th {
+    background-color: #007bff;
+    color: white;
+}
+  
+.admin-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+  
+.admin-table tr:hover {
+   background-color: #f1f1f1;
+}
+  
